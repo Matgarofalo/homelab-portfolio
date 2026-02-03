@@ -21,18 +21,18 @@ My documentation is modularized into three core domains:
 **Infrastructure & Server Builds**
 * **[Network Topology](./homelab-infrastructure/01-network-architecture/network-infrastructure.md):** VLAN segmentation, Firewall configuration, and Subnetting (192.168.1.0/24).
 * **[Server Build (Proxmox Node)](./homelab-infrastructure/02-server-builds/PVE-node-config.md):** Proxmox VE Host (`SRV-PVE-NODE1`) configuration and resource allocation for VMs and LXCs.
-* **[LXC Web Server](./homelab-infrastructure/02-server-builds/LXC-Web-Server-Node.md):** Lightweight container deployment for hosting the portfolio web stack.
-* **[Bare Metal Recovery](./homelab-infrastructure/02-server-builds/Bare-Metal-Recovery-Procedure.md):** Full disk imaging and restoration procedures (Clonezilla).
+* **[LXC Web Server](./homelab-infrastructure/02-server-builds/CentOS-deploy.md):** Lightweight container deployment for hosting the portfolio web stack.
+* **[Bare Metal Recovery](./homelab-infrastructure/02-server-builds/Clonezilla-deploy.md):** Full disk imaging and restoration procedures (Clonezilla).
 
 **Storage & Lab Reports**
-* **[RAID 10 Implementation](./homelab-infrastructure/03-lab-reports/raid-setups/RAID-10-Implementation.md):** Design and stress-testing of a high-performance striped mirror array in CentOS.
+* **[RAID 10 Implementation](./homelab-infrastructure/03-lab-reports/raid-setups/RAID-10.md):** Design and stress-testing of a high-performance striped mirror array in CentOS.
 * **[RAID 5 Parity Logic](./homelab-infrastructure/03-lab-reports/raid-setups/RAID-5-Parity.md):** Distributed parity implementation and "Hot Spare" rebuild analysis.
 * **[RAID 1 Mirror Recovery](./homelab-infrastructure/03-lab-reports/raid-setups/RAID-1-Mirror.md):** Troubleshooting advanced mirror corruption and manual "Break Mirror" recovery.
 * **[RAID 0 Failure Analysis](./homelab-infrastructure/03-lab-reports/raid-setups/RAID-0-Stripe.md):** Destructive testing demonstrating catastrophic data loss.
 
 **Troubleshooting**
-* **[WinRE Volume Triage](./homelab-infrastructure/04-logs-troubleshooting/WinRE-Volume-Triage.md):** Root cause analysis of offline repair failures (Drive Letter Shift) in Windows Recovery Environment.
-* **[Switch VLAN Config](./homelab-infrastructure/switch-configuration-vlan-setup/README.md):** Configuration of 802.1Q tagging and firmware troubleshooting on TP-Link managed switches.
+* **[WinRE Volume Diagnostics](./homelab-infrastructure/04-logs-troubleshooting/WinRE_troubleshooting.md):** Root cause analysis of offline repair failures (Drive Letter Shift) in Windows Recovery Environment.
+* **[Switch VLAN Config](./homelab-infrastructure/03-lab-reports/switch-vlan-config.md):** Configuration of 802.1Q tagging and firmware troubleshooting on TP-Link managed switches.
 
 ### 📂 [lab-tools-scripts](./lab-tools-scripts)
 **Automation**
@@ -41,7 +41,7 @@ My documentation is modularized into three core domains:
 * **[Windows Auditing](./lab-tools-scripts/02-windows/Win_Audit/README.md):** PowerShell tools for system health reporting and service monitoring.
 * *Note: Scripts utilize `sudo` and administrative privileges. Review code before execution.*
 
-### 📂 [web-development](./web-development)
+### 📂 [web-development](https://github.com/Matgarofalo/matgarofalo.com)
 **Web Development**
 * Source code and configuration for my personal portfolio, company website, and other projects.
 * Demonstrates Nginx reverse proxy implementation and static site deployment.

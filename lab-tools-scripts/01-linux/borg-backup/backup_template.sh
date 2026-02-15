@@ -34,9 +34,9 @@ nice -n 19 ionice -c 3 borg create \
     --compression zstd \
     "$REPO"::'{now:%Y-%m-%d_%H:%M}' \
     ~/ \
-    --exclude '~/Downloads' \
-    --exclude '~/.cache' \
-    --exclude '~/.local/share/Trash' \
+    --exclude '*/Downloads' \
+    --exclude '*/.cache' \
+    --exclude '*/.local/share/Trash' \
     --exclude '**/.DS_Store' >> $LOGFILE 2>&1  # <-- RESTORED LOGGING HERE
 
 BACKUP_EXIT_CODE=$?

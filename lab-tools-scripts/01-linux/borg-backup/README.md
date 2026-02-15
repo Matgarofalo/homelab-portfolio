@@ -21,6 +21,18 @@ If I need to force a backup (e.g., before a Fedora upgrade), I just type:
 backup
 
 
+##  Troubleshooting Case Study: Optimizing Backup Execution Time
+
+**The Problem:** Automated daily backups to the Proxmox NAS were taking over 90 minutes and consuming GBs of unnecessary storage, heavily taxing system resources. 
+
+**The Investigation:** By analyzing the live process logs, I isolated the bottleneck to the local browser `.cache` directory. Browser cache files change constantly, forcing Borg's deduplication engine to re-hash thousands of temporary files every night. I discovered that wrapping paths in single quotes in my bash script prevented the terminal from expanding the tilde (`~`) shortcut, causing Borg's pattern matcher to miss the intended exclusion directory.
+
+**The Solution:** 1. Rewrote the script syntax to use universal wildcards (`*/.cache` instead of `~/.cache`) to ensure the directory was properly bypassed.
+2. Retroactively purged the old cache data from the NAS by rewriting the archive index: `borg recreate --stats --exclude '*/.cache' <REPO>`
+3. Deleted the orphaned data chunks from the server drive to reclaim storage: `borg compact <REPO>`
+
+**The Result:** Reduced daily backup execution time from 1.5 hours to under 30 seconds, drastically lowering CPU overhead and permanently preventing NAS storage bloat.
+
 
 **Original**
 # Quick Borg Backup Script

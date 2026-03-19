@@ -33,7 +33,7 @@ If I need to force a backup (e.g., before a Fedora upgrade), I just type: backup
 
 
 **Original**
-# Quick Borg Backup Script
+** Quick Borg Backup Script
 **Date:** February 2025
 
 ## I wanted a single command I could run to backup my data whenever I plug my 1TB external SSD in.

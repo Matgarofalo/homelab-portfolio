@@ -16,9 +16,7 @@
 The script runs automatically every night at **10:00 PM** via a cron job, catching my laptop when it is awake but idle.
 
 **Manual:**
-If I need to force a backup (e.g., before a Fedora upgrade), I just type:
-```bash
-backup
+If I need to force a backup (e.g., before a Fedora upgrade), I just type: backup
 
 
 ##  Troubleshooting Case Study: Optimizing Backup Execution Time

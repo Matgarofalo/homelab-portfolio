@@ -19,7 +19,7 @@ The script runs automatically every night at **10:00 PM** via a cron job, catchi
 If I need to force a backup (e.g., before a Fedora upgrade), I just type: backup
 
 
-##  Troubleshooting Case Study: Optimizing Backup Execution Time
+##  Troubleshooting: Optimizing Backup Execution Time
 
 **The Problem:** Automated daily backups to the Proxmox NAS were taking over 90 minutes and consuming GBs of unnecessary storage, heavily taxing system resources. 
 
